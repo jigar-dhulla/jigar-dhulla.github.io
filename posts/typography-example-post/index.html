@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Jigar's Blog - Typography Example Post</title>
+        <meta name="description" content="Lorem reprehenderit proident irure. Dolore ipsum aliqua mollit ad officia fugiat sit eu aliquip cupidatat ipsum duis laborum laborum fugiat esse.">
+<meta property="og:title" content="Jigar's Blog | Typography Example Post" />
+<meta property="og:description" content="Lorem reprehenderit proident irure. Dolore ipsum aliqua mollit ad officia fugiat sit eu aliquip cupidatat ipsum duis laborum laborum fugiat esse." />
+
+
+        <link rel="preload" as="style" href="http://blog.test/build/assets/site-741ada9a.css" /><link rel="modulepreload" href="http://blog.test/build/assets/site-f613dc06.js" /><link rel="stylesheet" href="http://blog.test/build/assets/site-741ada9a.css" /><script type="module" src="http://blog.test/build/assets/site-f613dc06.js"></script>
+    </head>
+
+    <body class="flex flex-col min-h-screen font-inter">
+        <div class="sticky top-0 z-50 bg-white shadow-md">
+    <nav x-data="{ isMobile: false, showMobileNav: false }" x-screen="isMobile = ($width < 1024)" x-cloak
+        class="container flex flex-wrap items-center justify-between py-5 lg:py-6">
+        <div class="antialiased font-medium text-md max-w-[200px] lg:w-[200px]">
+            <a href="/" aria-label="Jigar's Blog" class="block mr-12 text-xl font-black lg:inline-block">
+    
+        Jigar's Blog
+    
+</a>
+        </div>
+
+        <!-- Toggle Button (mobile) -->
+        <div class="block lg:hidden">
+    <button class="flex items-center p-3 text-gray-800" x-bind:class="{ 'hidden': showMobileNav }"
+        @click="showMobileNav = true">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Open Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+    </button>
+    
+    <button class="items-center p-3 text-gray-800" x-bind:class="{ 'flex': showMobileNav, 'hidden': ! showMobileNav }"
+        @click="showMobileNav = false" x-cloak>
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Close Menu</title>
+            <path
+                d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
+        </svg>
+    </button>
+</div>
+
+        <!-- Mobile -->
+        <div class="items-center w-full lg:hidden" x-show="showMobileNav" @click.outside="showMobileNav = false">
+    <ul class="my-2 divide-y">
+        
+            <li>
+                <a href="/" aria-label="Home" class="pr-5 py-4 border-b last:border-b-0 font-medium text-gray-800 hover:text-blue-500 transition-all
+            block ">
+                    Home
+                </a>
+            </li>
+        
+            <li>
+                <a href="/about" aria-label="About" class="pr-5 py-4 border-b last:border-b-0 font-medium text-gray-800 hover:text-blue-500 transition-all
+            block ">
+                    About
+                </a>
+            </li>
+        
+            <li>
+                <a href="/posts" aria-label="Posts" class="pr-5 py-4 border-b last:border-b-0 font-medium text-gray-800 hover:text-blue-500 transition-all
+            block text-blue-500">
+                    Posts
+                </a>
+            </li>
+        
+            <li>
+                <a href="/categories" aria-label="Categories" class="pr-5 py-4 border-b last:border-b-0 font-medium text-gray-800 hover:text-blue-500 transition-all
+            block ">
+                    Categories
+                </a>
+            </li>
+        
+            <li>
+                <a href="/contact" aria-label="Contact" class="pr-5 py-4 border-b last:border-b-0 font-medium text-gray-800 hover:text-blue-500 transition-all
+            block ">
+                    Contact
+                </a>
+            </li>
+        
+    </ul>
+
+    <form action="/search">
+        <div class="relative">
+            <input type="search" name="q" id="q" value="" required placeholder="Search"
+                class="w-full py-2 pr-3 border rounded-md outline-none pl-9 hover:border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-800 focus:shadow-sm">
+
+            <button type="submit" class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" aria-hidden="true" class="w-4 h-4 text-gray-400">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </form>
+</div>
+
+        <!-- Desktop -->
+        <!-- Desktop -->
+<template x-if="!isMobile">
+    <ul class="hidden lg:w-auto lg:flex lg:items-center">
+        
+            <li>
+                <a href="/" aria-label="Home" class="px-5 py-2 font-medium text-gray-800 hover:text-blue-500 transition-all
+        block ">
+                    Home
+                </a>
+            </li>
+        
+            <li>
+                <a href="/about" aria-label="About" class="px-5 py-2 font-medium text-gray-800 hover:text-blue-500 transition-all
+        block ">
+                    About
+                </a>
+            </li>
+        
+            <li>
+                <a href="/posts" aria-label="Posts" class="px-5 py-2 font-medium text-gray-800 hover:text-blue-500 transition-all
+        block text-blue-500">
+                    Posts
+                </a>
+            </li>
+        
+            <li>
+                <a href="/categories" aria-label="Categories" class="px-5 py-2 font-medium text-gray-800 hover:text-blue-500 transition-all
+        block ">
+                    Categories
+                </a>
+            </li>
+        
+            <li>
+                <a href="/contact" aria-label="Contact" class="px-5 py-2 font-medium text-gray-800 hover:text-blue-500 transition-all
+        block ">
+                    Contact
+                </a>
+            </li>
+        
+    </ul>
+</template>
+
+<!-- Desktop Search -->
+<template x-if="!isMobile">
+    <form action="/search" class="hidden lg:block lg:max-w-[200px]">
+        <div class="relative">
+            <input type="search" name="q" id="q" value="" required placeholder="Search"
+                class="w-full py-2 pr-3 border rounded-md outline-none pl-9 hover:border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-800 focus:shadow-sm">
+
+            <button type="submit" class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" aria-hidden="true" class="w-4 h-4 text-gray-400">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </form>
+</template>
+    </nav>
+</div>
+
+        <div class="container py-8 md:py-12">
+    <div class="max-w-3xl mx-auto space-y-6">
+        
+    <div class="flex flex-wrap items-center justify-center space-x-6">
+        
+            <a href="/categories/tutorials" aria-label="Tutorials">
+                <span
+                    class="inline-block px-3 py-2 text-xs font-medium tracking-wider text-indigo-700 uppercase rounded-md bg-indigo-50 hover:scale-105">
+                    Tutorials
+                </span>
+            </a>
+        
+    </div>
+
+
+        <h2 class="font-bold text-center text-gray-800 text-3xl md:text-4xl lg:text-5xl ">
+    Typography Example Post
+</h2>
+
+        
+    <div class="flex justify-center mt-3 space-x-3 text-gray-500">
+        <div class="flex items-center space-x-3">
+            
+                <div class="relative flex-shrink-0 w-10 h-10">
+                    <img src="/assets/user.jpg" alt="John Doe"
+                        class="object-cover rounded-full"
+                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                </div>
+
+                <div>
+                    <p class="text-gray-500">
+                        John Doe
+                    </p>
+                    <div class="flex items-center space-x-2 text-sm">
+                        <div class="text-gray-500">
+                            <span class="pr-2">June 30, 2023</span>
+                            <span>·</span>
+                            <span class="pl-2">
+                                7 min read
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+
+    </div>
+
+    
+    <div class="relative z-0 max-w-6xl mx-auto my-8 overflow-hidden rounded-lg md:my-12 aspect-video">
+        <img src="/assets/post_9.png" alt="Typography Example Post" class="object-cover"
+            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent">
+    </div>
+
+    
+        <div class="max-w-3xl mx-auto prose
+prose-a:text-blue-500 prose-a:no-underline hover:prose-a:underline transition-all
+prose-blockquote:border-blue-500
+marker:text-blue-500
+prose-pre:text-gray-800 prose-pre:bg-gray-300
+prose-code:bg-gray-200 prose-code:text-red-700 prose-code:px-1 prose-code:py-0.5">
+    <h2><strong>Heading two</strong></h2><p>Aute officia nulla deserunt do deserunt cillum velit magna. Officia veniam culpa anim minim dolore labore pariatur voluptate id ad est duis quis velit dolor pariatur enim.</p><h3><strong>Heading three</strong></h3><p>Voluptate cupidatat cillum elit quis ipsum eu voluptate fugiat consectetur enim. Quis ut voluptate culpa ex anim aute consectetur dolore proident voluptate exercitation eiusmod. </p><h4><strong>Heading four</strong></h4><p>Commodo fugiat aliqua minim quis pariatur mollit id tempor. Non occaecat minim esse enim aliqua adipisicing nostrud duis consequat eu adipisicing qui.</p><h2>Paragraphs</h2><p>Incididunt ex adipisicing ea ullamco consectetur in voluptate proident fugiat tempor deserunt reprehenderit ullamco id dolore laborum. Do laboris laboris minim incididunt qui consectetur exercitation adipisicing dolore et magna consequat magna anim sunt. Officia fugiat Lorem sunt pariatur incididunt Lorem reprehenderit proident irure. Dolore ipsum aliqua mollit ad officia fugiat sit eu aliquip cupidatat ipsum duis laborum laborum fugiat esse. Voluptate anim ex dolore deserunt ea ex eiusmod irure. Occaecat excepteur aliqua exercitation aliquip dolor esse eu eu.</p><p></p><p>Left</p><p style="text-align: center;">Center</p><p style="text-align: right;">Right</p><p style="text-align: right;"></p><p>Officia dolore laborum aute incididunt commodo nisi velit est est elit et dolore elit exercitation. Enim aliquip magna id ipsum aliquip consectetur ad nulla quis. Incididunt pariatur dolor consectetur cillum enim velit cupidatat laborum quis ex.</p><h2>Image</h2>
+</div>
+
+    
+        <div class="max-w-3xl mx-auto my-8 md:mb-8">
+    <img src="/assets/post_10.jpg" alt="Typography Example Post" class="object-cover w-full h-auto">
+</div>
+
+    
+        <div class="max-w-3xl mx-auto prose
+prose-a:text-blue-500 prose-a:no-underline hover:prose-a:underline transition-all
+prose-blockquote:border-blue-500
+marker:text-blue-500
+prose-pre:text-gray-800 prose-pre:bg-gray-300
+prose-code:bg-gray-200 prose-code:text-red-700 prose-code:px-1 prose-code:py-0.5">
+    <h2>Links</h2><p>Enim aliquip <a href="https://www.google.com/">magna</a> id ipsum aliquip consectetur ad nulla quis. Incididunt pariatur dolor consectetur cillum enim velit <a href="https://www.google.com/">cupidatat</a> laborum quis ex.</p><h2>Blockquotes</h2><p>Ad nisi laborum aute cupidatat magna deserunt eu id laboris id. Aliquip nulla cupidatat sint ex Lorem mollit laborum dolor amet est ut esse aute. </p><blockquote><p><strong><em>Ipsum et cupidatat mollit exercitation enim duis sunt irure aliqua reprehenderit mollit. Pariatur Lorem pariatur laboris do culpa do elit irure. Eiusmod amet nulla voluptate velit culpa et aliqua ad reprehenderit sit ut.</em></strong></p></blockquote><p>Labore ea magna Lorem consequat aliquip consectetur cillum duis dolore. </p><blockquote><p><strong><em>Qui est sit et reprehenderit aute est esse enim aliqua id aliquip ea anim. Pariatur sint reprehenderit mollit velit voluptate enim consectetur sint enim. Quis exercitation proident elit non id qui culpa dolore esse aliquip consequat.</em></strong></p></blockquote><p>Ipsum excepteur cupidatat sunt minim ad eiusmod tempor sit.</p><blockquote><p><strong><em>Deserunt excepteur adipisicing culpa pariatur cillum laboris ullamco nisi fugiat cillum officia. In cupidatat nulla aliquip tempor ad Lorem Lorem quis voluptate officia consectetur pariatur ex in est duis. Mollit id esse est elit exercitation voluptate nostrud nisi laborum magna dolore dolore tempor in est consectetur.</em></strong></p></blockquote><p>Adipisicing voluptate ipsum culpa voluptate id aute laboris labore esse fugiat veniam ullamco occaecat do ut. </p><h2>Lists</h2><h3><strong>Ordered List</strong></h3><ol><li><p>Longan</p></li><li><p>Lychee</p></li><li><p>Excepteur ad cupidatat do elit laborum amet cillum reprehenderit consequat quis. Deserunt officia esse aliquip consectetur duis ut labore laborum commodo aliquip aliquip velit pariatur dolore.</p></li><li><p>Marionberry</p></li><li><p>Melon</p><ul><li><p>Cantaloupe</p></li><li><p>Honeydew</p></li><li><p>Watermelon</p></li></ul></li><li><p>Miracle fruit</p></li><li><p>Mulberry</p></li></ol><h3><strong>Unordered List</strong></h3><ul><li><p>Olive</p></li><li><p>Orange</p><ul><li><p>Blood orange</p></li><li><p>Clementine</p></li></ul></li><li><p>Papaya</p></li><li><p>Ut aute ipsum occaecat nisi culpa Lorem id occaecat cupidatat id id magna laboris ad duis. Fugiat cillum dolore veniam nostrud proident sint consectetur eiusmod irure adipisicing.</p></li><li><p>Passionfruit</p></li></ul><h2>Horizontal rule</h2><p>In dolore velit aliquip labore mollit minim tempor veniam eu veniam ad in sint aliquip mollit mollit. Ex occaecat non deserunt elit laborum sunt tempor sint consequat culpa culpa qui sit. Irure ad commodo eu voluptate mollit cillum cupidatat veniam proident amet minim reprehenderit.</p><hr><p>In laboris eiusmod reprehenderit aliquip sit proident occaecat. Non sit labore anim elit veniam Lorem minim commodo eiusmod irure do minim nisi. Dolor amet cillum excepteur consequat sint non sint.</p><h2><strong>Table</strong></h2><p>Duis sunt ut pariatur reprehenderit mollit mollit magna dolore in pariatur nulla commodo sit dolor ad fugiat. Laboris amet ea occaecat duis eu enim exercitation deserunt ea laborum occaecat reprehenderit. </p><p></p><table><tbody><tr><th rowspan="1" colspan="1"><p><strong>Table Heading 1</strong></p></th><th rowspan="1" colspan="1"><p><strong>Table Heading 2</strong></p></th><th rowspan="1" colspan="1"><p><strong>Center align</strong></p></th><th rowspan="1" colspan="1"><p><strong>Right align</strong></p></th><th rowspan="1" colspan="1"><p><strong>Table Heading 5</strong></p></th></tr><tr><td rowspan="1" colspan="1"><p>Item 1</p></td><td rowspan="1" colspan="1"><p>Item 2</p></td><td rowspan="1" colspan="1"><p>Item 3</p></td><td rowspan="1" colspan="1"><p>Item 4</p></td><td rowspan="1" colspan="1"><p>Item 5</p></td></tr><tr><td rowspan="1" colspan="1"><p>Item 1</p></td><td rowspan="1" colspan="1"><p>Item 2</p></td><td rowspan="1" colspan="1"><p>Item 3</p></td><td rowspan="1" colspan="1"><p>Item 4</p></td><td rowspan="1" colspan="1"><p>Item 5</p></td></tr><tr><td rowspan="1" colspan="1"><p>Item 1</p></td><td rowspan="1" colspan="1"><p>Item 2</p></td><td rowspan="1" colspan="1"><p>Item 3</p></td><td rowspan="1" colspan="1"><p>Item 4</p></td><td rowspan="1" colspan="1"><p>Item 5</p></td></tr><tr><td rowspan="1" colspan="1"><p>Item 1</p></td><td rowspan="1" colspan="1"><p>Item 2</p></td><td rowspan="1" colspan="1"><p>Item 3</p></td><td rowspan="1" colspan="1"><p>Item 4</p></td><td rowspan="1" colspan="1"><p>Item 5</p></td></tr><tr><td rowspan="1" colspan="1"><p>Item 1</p></td><td rowspan="1" colspan="1"><p>Item 2</p></td><td rowspan="1" colspan="1"><p>Item 3</p></td><td rowspan="1" colspan="1"><p>Item 4</p></td><td rowspan="1" colspan="1"><p>Item 5</p></td></tr></tbody></table><p></p><p>Minim id consequat adipisicing cupidatat laborum culpa veniam non consectetur et duis pariatur reprehenderit eu ex consectetur. Sunt nisi qui eiusmod ut cillum laborum Lorem officia aliquip laboris ullamco nostrud laboris non irure laboris. Cillum dolore labore Lorem deserunt mollit voluptate esse incididunt ex dolor.</p><h3><strong>Inline code</strong></h3><p>Ad amet irure est magna id mollit Lorem in do duis enim. Excepteur velit nisi magna ea pariatur pariatur ullamco fugiat deserunt sint non sint. Duis <code>duis est velit velit aute culpa ex</code> quis pariatur pariatur laborum aute pariatur duis tempor sunt ad. Irure magna voluptate dolore consectetur consectetur irure esse. Anim magna dolor eiusmod esse amet aute cupidatat aliqua do id voluptate cupidatat reprehenderit amet labore deserunt.</p><h2>Extras - Small, Underline, Strike Through</h2><p>Et fugiat ad nisi <small>amet magna </small>labore do cillum fugiat occaecat cillum Lorem proident. In sint dolor ullamco ad do adipisicing amet <strike>id excepteur Lorem aliquip sit irure veniam laborum</strike> duis cillum. <u>Aliqua occaecat minim cillum deserunt</u> magna sunt laboris do do irure ea nostrud consequat ut voluptate ex.</p>
+</div>
+
+    
+</div>
+
+
+    
+        <div class="bg-gray-50">
+            <div class="container py-8 md:py-12">
+                <h3 class="font-bold  text-gray-800 text-2xl md:text-3xl lg:text-4xl mb-8 md:mb-12">
+    Similiar Posts
+</h3>
+
+                <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+                    
+                        <div class="cursor-pointer group">
+    
+    <div class="overflow-hidden transition-all bg-gray-100 rounded-md hover:scale-105">
+        <a href="/posts/top-3-resources-for-free-photos" aria-label="Top 3 Resources for Free Photos" class="relative block aspect-video">
+            <img src="/assets/post_8.png" alt="Top 3 Resources for Free Photos" class="object-cover w-full h-auto transition-all"
+                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+        </a>
+    </div>
+
+    <div>
+        
+        
+            <div class="flex flex-wrap mb-3">
+                
+                    <a href="/categories/design" aria-label="Design" class="mt-3 mr-3">
+                        <span
+                            class="inline-block px-3 py-2 text-xs font-medium tracking-wider text-indigo-700 uppercase rounded-md bg-indigo-50 hover:scale-105">
+                            Design
+                        </span>
+                    </a>
+                
+            </div>
+        
+        
+        <div class="mt-3 text-xl font-semibold leading-snug tracking-tight">
+            <a href="/posts/top-3-resources-for-free-photos" aria-label="Top 3 Resources for Free Photos">
+                <span
+                    class="bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]">
+                    Top 3 Resources for Free Photos
+                </span>
+            </a>
+        </div>
+
+        
+        <div class="flex flex-wrap items-center space-x-3 text-gray-500">
+            <div class="flex items-center mt-3 space-x-3">
+                
+                    <div class="relative flex-shrink-0 w-5 h-5">
+                        <img src="/assets/user.jpg" alt="John Doe"
+                            class="object-cover rounded-full"
+                            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                    </div>
+                    <span class="text-sm truncate">John Doe</span>
+                
+            </div>
+
+            <span class="mt-3 text-xs text-gray-300">•</span>
+
+            <p class="mt-3 text-sm truncate">
+                June 30, 2023
+            </p>
+            
+                <span class="mt-3 text-xs text-gray-300">•</span>
+
+                <span class="mt-3 text-sm text-gray-500">
+                    2 min read
+                </span>
+            
+        </div>
+    </div>
+</div>
+                    
+                        <div class="cursor-pointer group">
+    
+    <div class="overflow-hidden transition-all bg-gray-100 rounded-md hover:scale-105">
+        <a href="/posts/how-to-become-a-frontend-master" aria-label="How to become a Frontend Master" class="relative block aspect-video">
+            <img src="/assets/post_3.png" alt="How to become a Frontend Master" class="object-cover w-full h-auto transition-all"
+                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+        </a>
+    </div>
+
+    <div>
+        
+        
+            <div class="flex flex-wrap mb-3">
+                
+                    <a href="/categories/tutorials" aria-label="Tutorials" class="mt-3 mr-3">
+                        <span
+                            class="inline-block px-3 py-2 text-xs font-medium tracking-wider text-indigo-700 uppercase rounded-md bg-indigo-50 hover:scale-105">
+                            Tutorials
+                        </span>
+                    </a>
+                
+            </div>
+        
+        
+        <div class="mt-3 text-xl font-semibold leading-snug tracking-tight">
+            <a href="/posts/how-to-become-a-frontend-master" aria-label="How to become a Frontend Master">
+                <span
+                    class="bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]">
+                    How to become a Frontend Master
+                </span>
+            </a>
+        </div>
+
+        
+        <div class="flex flex-wrap items-center space-x-3 text-gray-500">
+            <div class="flex items-center mt-3 space-x-3">
+                
+                    <div class="relative flex-shrink-0 w-5 h-5">
+                        <img src="/assets/user.jpg" alt="John Doe"
+                            class="object-cover rounded-full"
+                            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                    </div>
+                    <span class="text-sm truncate">John Doe</span>
+                
+            </div>
+
+            <span class="mt-3 text-xs text-gray-300">•</span>
+
+            <p class="mt-3 text-sm truncate">
+                June 30, 2023
+            </p>
+            
+                <span class="mt-3 text-xs text-gray-300">•</span>
+
+                <span class="mt-3 text-sm text-gray-500">
+                    8 min read
+                </span>
+            
+        </div>
+    </div>
+</div>
+                    
+                        <div class="cursor-pointer group">
+    
+    <div class="overflow-hidden transition-all bg-gray-100 rounded-md hover:scale-105">
+        <a href="/posts/web-design-trends-for-2023" aria-label="Web Design Trends for 2023" class="relative block aspect-video">
+            <img src="/assets/post_4.png" alt="Web Design Trends for 2023" class="object-cover w-full h-auto transition-all"
+                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+        </a>
+    </div>
+
+    <div>
+        
+        
+            <div class="flex flex-wrap mb-3">
+                
+                    <a href="/categories/technology" aria-label="Technology" class="mt-3 mr-3">
+                        <span
+                            class="inline-block px-3 py-2 text-xs font-medium tracking-wider text-indigo-700 uppercase rounded-md bg-indigo-50 hover:scale-105">
+                            Technology
+                        </span>
+                    </a>
+                
+            </div>
+        
+        
+        <div class="mt-3 text-xl font-semibold leading-snug tracking-tight">
+            <a href="/posts/web-design-trends-for-2023" aria-label="Web Design Trends for 2023">
+                <span
+                    class="bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]">
+                    Web Design Trends for 2023
+                </span>
+            </a>
+        </div>
+
+        
+        <div class="flex flex-wrap items-center space-x-3 text-gray-500">
+            <div class="flex items-center mt-3 space-x-3">
+                
+                    <div class="relative flex-shrink-0 w-5 h-5">
+                        <img src="/assets/user.jpg" alt="John Doe"
+                            class="object-cover rounded-full"
+                            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                    </div>
+                    <span class="text-sm truncate">John Doe</span>
+                
+            </div>
+
+            <span class="mt-3 text-xs text-gray-300">•</span>
+
+            <p class="mt-3 text-sm truncate">
+                July 01, 2023
+            </p>
+            
+                <span class="mt-3 text-xs text-gray-300">•</span>
+
+                <span class="mt-3 text-sm text-gray-500">
+                    1 min read
+                </span>
+            
+        </div>
+    </div>
+</div>
+                    
+                </div>
+            </div>
+        </div>
+    
+
+
+
+
+        <div class="border-t border-gray-300">
+    <div class="container py-8 md:py-12">
+        <div
+            class="prose transition-all max-w-none prose-p:text-sm prose-p:text-center prose-p:my-1 prose-a:no-underline hover:prose-a:text-blue-500">
+            <p>Copyright © 2023 Blogo. All rights reserved.</p><p>Made by <a target="_blank" href="https://github.com/afan417">Afan Ajdari</a> · <a target="_blank" href="https://github.com/afan417/blogo-starter-kit">Github</a></p>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
