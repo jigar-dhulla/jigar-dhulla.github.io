@@ -1,0 +1,12 @@
+# Jigar's Personal Blog
+
+This is static site generated from statamic that resides in blog repo.
+
+# Deployment (Reminder to myself)
+
+```bash
+cd ~/projects/blog
+php please ssg:generate
+cp -rf storage/app/static/* ../jigarakatidus.github.io
+```
+
