@@ -7,6 +7,6 @@ This is static site generated from statamic that resides in blog repo.
 ```bash
 cd ~/projects/blog
 php please ssg:generate
-cp -rf storage/app/static/* ../jigarakatidus.github.io
+cp -rf storage/app/static/* ../jigar-dhulla.github.io
 ```
 
